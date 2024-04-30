@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layout2}">
+	  
+	  
+
+<div layout:fragment="content">
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-success text-center-success text fw-normal">추천 식단</h5>
+                    <h1 class="mb-5">건강한 5대 질병 식단</h1>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <i class="fa fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Hypertension</small>
+                                    <h6 class="mt-n1 mb-0 text-center">고혈압</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                <i class="fa fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Cancer</small>
+                                    <h6 class="mt-n1 mb-0 text-center">암</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <i class="fa fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Alzheimer</small>
+                                    <h6 class="mt-n1 mb-0 text-center">치매</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-4">
+                                <i class="fa  fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Hyperlipidemia</small>
+                                    <h6 class="mt-n1 mb-0 text-center">고지혈증</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-5">
+                                <i class="fa  fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Diabetes</small>
+                                    <h6 class="mt-n1 mb-0 text-center">당뇨</h6>
+                                </div>
+                            </a>
+                        </li>
+                                
+                    </ul>
+                    
+                    <div class="tab-content">
+                    
+                    	<!-- 고혈압 -->
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4 ">
+                            
+                                <div class="col-lg-6" th:each="recipe1 : ${recipes1}">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${recipe1.img}" alt="" style="width:70px; height:60px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span th:text="${recipe1.name}"></span>
+                                               
+                                            </h5>
+                                            <small class="fst-italic" th:text="${recipe1.ingredients}"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 고혈압 -->
+                        
+                        <!-- 암 -->
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4 ">
+                            
+                                <div class="col-lg-6" th:each="recipe2 : ${recipes2}">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${recipe2.img}" alt="" style="width:70px; height:60px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span th:text="${recipe2.name}"></span>
+                                               
+                                            </h5>
+                                            <small class="fst-italic" th:text="${recipe2.ingredients}"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 암 -->
+                        
+                        <!-- 치매 -->
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4 ">
+                            
+                                <div class="col-lg-6" th:each="recipe3 : ${recipes3}">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${recipe3.img}" alt="" style="width:70px; height:60px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span th:text="${recipe3.name}"></span>
+                                               
+                                            </h5>
+                                            <small class="fst-italic" th:text="${recipe3.ingredients}"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 치매 -->
+                        
+                        <!-- 고지혈증 -->
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4 ">
+                            
+                                <div class="col-lg-6" th:each="recipe4 : ${recipes4}">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${recipe4.img}" alt="" style="width:70px; height:60px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span th:text="${recipe4.name}"></span>
+                                               
+                                            </h5>
+                                            <small class="fst-italic" th:text="${recipe4.ingredients}"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 고지혈증 -->
+                        
+                        <!-- 당뇨 -->
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4 ">
+                            
+                                <div class="col-lg-6" th:each="recipe5 : ${recipes5}">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${recipe5.img}" alt="" style="width:70px; height:60px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span th:text="${recipe5.name}"></span>
+                                               
+                                            </h5>
+                                            <small class="fst-italic" th:text="${recipe5.ingredients}"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 당뇨 -->
+                        
+        				
+		<div class="d-flex justify-content-center">        
+         	<a class="btn btn-outline-success py-sm-3 px-sm-5 me-3" sec:authorize="isAuthenticated()" th:href="@{/service2}">나만의 식단</a>
+         </div>
+        
+      </div>
+         <!-- 나만의식단 -->
+        <div class="w-75 mt-5 mx-auto">
+        
+        	<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">항목</th>
+			      <td colspan="2"></td>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="col">연령</th>
+			      <td colspan="2" th:text="${memberDTO.age}"></td>
+			      <input type="hidden" name="age" th:value="${memberDTO.age}">
+			    </tr>
+			    <tr>
+			      <th scope="col">이름</th>
+			      <td colspan="2" th:text="${memberDTO.name}"></td>
+			      <input type="hidden" name="name" th:value="${memberDTO.name}">
+			    </tr>
+			    <tr>
+			      <th scope="col">질병</th>
+			      <td colspan="2">
+			      	<select class="form-select" name="disease" aria-label="Default select example">
+					  <option selected>무병자</option>
+					  <option>고혈압</option>
+					  <option>당뇨</option>
+					  <option>치매</option>
+					  <option>암</option>
+					  <option>고지혈증</option>
+					</select>
+			      </td>
+			    </tr>
+			    <tr>
+			    	<th scope="col" class="w-25">음식</th>
+			      	<td scope="col" class="w-50">
+			      		<input type="text" name="food1" class="form-control" placeholder="음식 입력">
+			      	</td>
+			      	<td scope="col" class="w-25">
+			      		<input type="number" name="food1_num" class="form-control" placeholder="수량" min="0">
+			      	</td>
+			  	</tr>
+			  	<tr>
+			    	<th scope="col">음식</th>
+			      	<td>
+			      		<input type="text" name="food2" class="form-control" placeholder="음식 입력">
+			      	</td>
+			      	<td scope="col">
+			      		<input type="number" name="food2_num" class="form-control" placeholder="수량" min="0">
+			      	</td>
+			  	</tr>
+			  	<tr>
+			    	<th scope="col">음식</th>
+			      	<td scope="col">
+			      		<input type="text" name="food3" class="form-control" placeholder="음식 입력">
+			      	</td>
+			      	<td scope="col">
+			      		<input type="number" name="food3_num" class="form-control" placeholder="수량" min="0">
+			      	</td>
+			  	</tr>
+			  	<tr>
+			    	<th scope="col">음식</th>
+			      	<td scope="col">
+			      		<input type="text" name="food4" class="form-control" placeholder="음식 입력">
+			      	</td>
+			      	<td scope="col">
+			      		<input type="number" name="food4_num" class="form-control" placeholder="수량" min="0">
+			      	</td>
+			  	</tr>
+			  	<tr>
+			    	<th scope="col">음식</th>
+			      	<td>
+			      		<input type="text" name="food5" class="form-control" placeholder="음식 입력">
+			      	</td>
+			      	<td scope="col">
+			      		<input type="number" name="food5_num" class="form-control" placeholder="수량" min="0">
+			      	</td>
+			  	</tr>
+			  	
+			  	<tr>
+			  		<th scope="col"></th>
+			  		<td scope="col" class="w-100 d-flex justify-content-center">
+			  			<button type="button" class="btn btn-secondary me-2">전송</button>
+			  			<button type="button" class="btn btn-secondary">취소</button>
+			  		</td>
+			  	</tr>
+			  	
+			  </tbody>
+			</table>
+        
+        
+        </div>
+        <!--// 나만의식단 -->
+        
+        
+        
+        <!-- service End -->
+    </div>
+</html>
