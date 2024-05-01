@@ -1,0 +1,130 @@
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layout2}">
+
+
+<div layout:fragment="content">
+	 
+              <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title-success text-start text-success fw-normal">자세히</h5>
+                        <h1 class="mb-4">'건 건 건' 에 오신 걸 환영합니다 </h1>
+                        <p class="mb-4">'건 건 건' 이란 첫째도 '건'강 둘째도 '건'강 셋째도 '건'강으로 건강을 강조하는 의미를 가집니다. </p>
+                        <p class="mb-4">5대 질병에 대해 분석하고 소개하여 모두 건강한 식단을 가질 수 있도록 소개하려고 합니다.</p>
+                        <div class="row g-4 mb-4">
+                        </div>
+                        <a class="btn-success py-3 px-5 mt-2" th:href="@{/about}">자세히</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+     
+      <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center " data-wow-delay="0.1s">
+                    <h5 class="section-title ff text-center text fw-normal">소개</h5>
+                    <h1 class="mb-5">5대 질병이란</h1>
+                </div>
+                <div class="row row-cols-5" th:href="@{/about}"> 
+                    <div class="col fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3" >
+                            <div class="p-4" >
+                                <i class="fa fa-3x  text-primary mb-4" ></i>
+                                <h5>고혈압</h5>
+                                <p class="slide-pnl-styl">혈압이 여러 원인으로 인해 높아진 상태를 의미합니다. 혈압은 동맥혈관 벽에 대항한 혈액의 압력을 말합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x  text-primary mb-4"></i>
+                                <h5>암(위암)</h5>
+                                <p class="slide-pnl-styl">일반적으로 위 선암을 말하며 위의 점막에서 발생합니다. 시간이 지남에 따라 점막하층, 근육층, 장막하층, 장막층으로 침윤합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x  text-primary mb-4"></i>
+                                <h5>고지혈증</h5>
+                                <p class="slide-pnl-styl">혈중에 지질 성분이 증가한 상태이다. 혈관벽에 쌓여 죽상경화증을 일으키거나 다른 질환을 유발할 수 있다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col fadeInUp" data-wow-delay="0.9s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x  text-primary mb-4"></i>
+                                <h5>치매</h5>
+                                <p class="slide-pnl-styl">후천적으로 기억, 언어, 판단력 등의 여러 영역의 인지 기능이 감소하여 일상생활을 제대로 수행하지 못하는 임상 증후군을 의미합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x  text-primary mb-4"></i>
+                                <h5>당뇨</h5>
+                                <p class="slide-pnl-styl ">췌장에서 분비되는 '인슐린'이라는 호르몬이 모자라거나 제대로 일을 못 하는 상태가 되면 혈당이 상승하며, 지속적으로 높은 상태가 됩니다.
+							   </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!-- Menu Start -->
+        <div class="container-xxl pt-5 pb-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                 <h1 class="mb-3">5대 질병 추천 영양소</h1>
+                 <p class=h5>균형잡힌 식사</p>
+                 <div class="d-flex align-content-between flex-wrap justify-content-center">
+                 
+                 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset 1.png">
+                 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset 3.png">
+                 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset 4.png">
+                 </div>
+                 <div class="d-flex align-content-between flex-wrap justify-content-center">
+                 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset-1.png">
+                 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset.png">
+				 <img class="img-fluid rounded w-20 wow zoomIn" data-wow-delay="0.7s" src="img/Asset 5.png">
+			    </div>
+                </div>
+                </div>
+            </div>
+         <div class="d-flex justify-content-center">        
+         <a th:href="@{/service}" class="btn-success py-sm-3 px-sm-5 me-3 animated slideInLeft">추천 식단</a>
+		</div>        
+              
+        <!-- Menu End -->
+
+</div>
+
+</html>
